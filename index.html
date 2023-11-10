@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Mentor | Interactive card details form</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="form-validation.js" defer></script>
+</head>
+<body>
+  <main>
+    <!--UPPER SECTION-->
+    <section class="upper_container">
+      <!--SUCCESS MODAL WITH COMPLETE DATA-->
+      <!--MODAL CARD FRONT-->
+      <div class="card-front-complete-data"> 
+        <div class="card-front-flex">
+          <div class="circles">
+            <span class="big-circle"></span>
+            <span class="small-circle"></span>
+          </div>
+          <div class="card-front-lower">
+            <div class="card-front-number-group">
+              <span class="number-group">9591</span>
+              <span class="number-group">6489</span>
+              <span class="number-group">6389</span>
+              <span class="number-group">1011</span>
+            </div>
+            <div class="card-front-name-group">
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--MODAL CARD BACK-->
+      <div class="card-back-complete-data">
+        <div class="position-number-container-complete-data">
+          <div class="cvc-display">123</div>
+        </div>
+      </div>
+      <!------------------------>
+      
+      <div class="card-front">
+        <div class="card-front-flex">
+          <div class="circles">
+            <span class="big-circle"></span>
+            <span class="small-circle"></span>
+          </div>
+          <div class="card-front-lower">
+            <div class="card-front-number-group">
+              <div class="number-group">
+                <span>X</span>
+                <span>X</span>
+                <span>X</span>
+                <span>X</span>
+              </div>
+              <div class="number-group">
+                <span>X</span>
+                <span>X</span>
+                <span>X</span>
+                <span>X</span>
+              </div>
+              <div class="number-group">
+                <span>X</span>
+                <span>X</span>
+                <span>X</span>
+                <span>X</span>
+              </div>
+              <div class="number-group">
+                <span>X</span>
+                <span>X</span>
+                <span>X</span>
+                <span>X</span>
+              </div>
+            </div>
+            <div class="card-front-name-group">
+              <span>Card Owner</span>
+              <span>mm/yy</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-back">
+        <!--creating additional container for making pseudo element to position '000' 
+        numbers-->
+        <div class="position-number-container">
+          <!--CSS Styling => pseudo element ::after-->
+        </div>
+      </div>
+    </section>
+    <!--LOWER SECTION-->
+    <section class="lower_container">
+      <form>
+        <div class="input-group">
+          <label for="name">Cardholder Name</label>
+          <input id="name" type="text" placeholder="e.g. Jane Appleseed">
+          <p class="error"></p>
+        </div>
+
+        <div class="input-group">
+          <label for="number">Card Number</label>
+          <input id="number" type="text" placeholder="e.g. 1234 5678 9123 0000">
+          <p class="error"></p>
+        </div>
+        
+        <div class="last-group">
+          <div class="last-group-element-one">
+            <label for="date">Exp. Date (MM/YY)</label>
+            <div class="last-group-element-one-flex">
+              <div>
+                <input id="month" type="text" placeholder="MM">
+                <p class="error"></p>
+              </div>
+              <div>
+                <input id="year" maxlength="2" type="text" placeholder="YY">
+                <p class="error"></p>
+              </div>
+            </div>
+          </div>
+          <div class="last-group-element-two">
+            <label for="cvc">Cvc</label>
+            <input id="cvc" type="text" placeholder="e.g. 123">
+            <p class="error"></p>
+          </div>
+        </div>
+        <button class="form-button">Confirm</button>
+      </form>
+
+      <!--MODAL SUCCESS MESSAGE-->
+      <div class="modal_success_message">
+        <div class="modal-success-message-inner-container">
+          <div class="modal-success-message-logo">
+            <!--CSS STYLING-->
+          </div>
+
+          <div class="modal-success-message-text">
+            <h1>Thank you!</h1>
+            <p>We've added your card details</p>
+          </div>
+
+          <button class="form-button">Continue</button>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/Zdravko93" target="_blank">Zdravko</a>.
+  </div>
+</body>
+
+</html>

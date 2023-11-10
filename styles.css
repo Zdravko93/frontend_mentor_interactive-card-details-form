@@ -1,0 +1,613 @@
+:root {
+  --primary-gradient: linear-gradient(
+    to right bottom,
+    hsl(249, 99%, 64%),
+    hsl(278, 94%, 30%)
+  );
+  --red: hsl(0, 100%, 66%);
+  --white: hsl(0, 0%, 100%);
+  --light-grayish-violet: hsl(270, 3%, 87%);
+  --dark-grayish-violet: hsl(279, 6%, 55%);
+  --very-dark-violet: hsl(278, 68%, 11%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Space Grotesk", sans-serif;
+  overflow-y: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  max-width: 370px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 1px 20px 1px rgba(0, 0, 0, 0.2);
+}
+
+.upper_container {
+  padding: 8rem 0rem;
+  background: url("images/bg-main-mobile.png");
+  background-size: cover;
+  position: relative;
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  height: 160px;
+  width: 280px;
+  border-radius: 8px;
+  z-index: 5;
+}
+
+.card-back {
+  z-index: 4;
+}
+
+.card-front {
+  padding: 1rem;
+  background: url("images/bg-card-front.png");
+  background-size: cover;
+  color: var(--white);
+  bottom: -15%;
+  left: 1rem;
+}
+
+.card-front-flex {
+  display: flex;
+  gap: 2.5rem;
+  flex-direction: column;
+}
+
+.circles {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.big-circle,
+.small-circle {
+  border-radius: 50%;
+}
+
+.big-circle {
+  width: 30px;
+  height: 30px;
+  background: var(--white);
+}
+
+.small-circle {
+  width: 15px;
+  height: 15px;
+  border: 1px solid var(--white);
+}
+
+.card-front-lower {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.card-front-number-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-front-number-group span {
+  font-size: 1.2rem;
+}
+
+.number-group span {
+  font-size: 1rem;
+}
+
+.card-front-name-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-front-name-group span {
+  text-transform: uppercase;
+  font-size: 0.6rem;
+  letter-spacing: 1px;
+}
+
+.card-back {
+  transform: translateY(-52%);
+  right: 1rem;
+  background: url("images/bg-card-back.png");
+  background-size: cover;
+  background-position: center;
+}
+
+/* additional container for positioning '000' element with pseudo class,
+hence the 'position:relative' property */
+.position-number-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+/* pseudo element for positioning '000' numbers*/
+.position-number-container::after {
+  content: "XXX";
+  position: absolute;
+  top: 4.56rem;
+  right: 1.7rem;
+  font-size: 0.6rem;
+  letter-spacing: 2px;
+  color: var(--white);
+}
+
+.lower_container {
+  padding: 5.5rem 1.5rem 2.5rem;
+  background: var(--white);
+  display: flex;
+  position: relative;
+}
+
+form {
+  display: flex;
+  gap: 1.2rem;
+  flex-direction: column;
+}
+
+form label {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.input-group {
+  display: flex;
+  gap: 0.4rem;
+  flex-direction: column;
+}
+
+.last-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.last-group > .last-group-element-one {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  flex: 1;
+}
+
+.last-group-element-one-flex {
+  display: flex;
+  gap: 1rem;
+}
+
+.last-group-element-one-flex input,
+.last-group-element-two input {
+  width: 100%;
+}
+
+.last-group > .last-group-element-two {
+  flex: 1;
+}
+
+.input-group input,
+.last-group input {
+  padding: 0.7rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1rem;
+  color: var(--very-dark-violet);
+  border-radius: 8px;
+  border: 1px solid var(--light-grayish-violet);
+}
+
+.error {
+  margin: 0;
+  height: 15px;
+  font-size: 0.7rem;
+  color: var(--red);
+}
+
+.last-group .error {
+  margin-top: 0.4rem;
+}
+
+.error.show-error {
+  opacity: 1;
+}
+
+.input-group input:focus,
+.last-group input:focus {
+  outline: none;
+  border: none;
+  border: 1px solid var(--light-grayish-violet);
+}
+
+input::-moz-placeholder {
+  color: var(--light-grayish-violet);
+}
+
+input::placeholder {
+  color: var(--light-grayish-violet);
+}
+
+.last-group-element-two {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.last-group-element-two label {
+  margin-bottom: auto;
+}
+
+/*  Chrome  */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+/* Firefox  */
+input[type=number] {
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+          appearance: textfield;
+  margin: 0;
+}
+
+/* Input spinners*/
+input[type=number] {
+  position: relative;
+  padding: 15px;
+  padding-right: 25px;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: inner-spin-button !important;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+
+/* Remove spinners from CARD NUMBER INPUT FIELD */
+/* Chrome */
+.input-group input[type=number]::-webkit-outer-spin-button,
+.input-group input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  appearance: none !important;
+}
+
+/* Firefox */
+.input-group input[type=number] {
+  -moz-appearance: textfield !important;
+  -webkit-appearance: textfield !important;
+          appearance: textfield !important;
+}
+
+/* Remove spinners from 'CVC input field */
+.last-group-element-two input::-webkit-outer-spin-button,
+.last-group-element-two input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  appearance: none !important;
+}
+
+.last-group-element-two input {
+  -moz-appearance: textfield !important;
+  -webkit-appearance: textfield !important;
+          appearance: textfield !important;
+}
+
+.form-button {
+  margin-top: 3.5rem;
+  padding: 1rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background: var(--very-dark-violet);
+  color: var(--white);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: all 200ms ease;
+}
+
+.form-button:hover,
+.form-button:focus {
+  background: hsl(278, 68%, 21%);
+}
+
+/* SUCCESS MODAL STATE - USER DATA */
+.card-front-complete-data,
+.card-back-complete-data {
+  position: absolute;
+  height: 160px;
+  width: 280px;
+  border-radius: 8px;
+}
+
+.card-front-complete-data {
+  padding: 1rem;
+  background: url("images/bg-card-front.png");
+  background-size: cover;
+  color: var(--white);
+  bottom: -15%;
+  left: 1rem;
+  box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+.card-front-complete-data .card-front-number-group {
+  padding-right: 1.7rem;
+}
+
+.card-front-complete-data .card-front-number-group span {
+  font-size: 1.2rem;
+}
+
+.card-back-complete-data {
+  transform: translateY(-52%);
+  right: 1rem;
+  background: url("images/bg-card-back.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.position-number-container-complete-data {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.cvc-display {
+  position: absolute;
+  top: 4.5rem;
+  right: 2rem;
+  font-size: 0.6rem;
+  letter-spacing: 2px;
+  color: var(--white);
+}
+
+.modal_success_message {
+  position: absolute;
+  inset: 0;
+  padding: 0rem 1rem;
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: -1;
+}
+
+.modal-success-message-inner-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-success-message-logo {
+  margin: 0 auto;
+  background: url("images/icon-complete.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
+
+.modal-success-message-text {
+  text-align: center;
+}
+
+.modal-success-message-text h1 {
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+.modal-success-message-text p {
+  font-size: 1.1rem;
+  color: var(--dark-grayish-violet);
+}
+
+.modal_success_message .form-button {
+  width: 100%;
+  margin-top: 1.8rem;
+  text-align: center;
+}
+
+/* show/hide modal and complete data cards */
+.card-front-complete-data.complete {
+  z-index: 99;
+}
+
+.card-back-complete-data.complete {
+  z-index: 98;
+}
+
+.modal_success_message.complete {
+  z-index: 97;
+}
+
+/*------------------------*/
+/* MEDIA QUERIES */
+/* 600px => */
+@media (min-width: 600px) {
+  main {
+    max-width: 550px;
+  }
+  .card-back,
+  .card-front,
+  .card-front-complete-data,
+  .card-back-complete-data {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .card-back,
+  .card-back-complete-data {
+    top: -20%;
+    box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.2);
+  }
+  .card-front-flex {
+    height: 100%;
+    justify-content: space-around;
+  }
+  .modal-success-message-inner-container {
+    padding-inline: 7.5rem;
+  }
+}
+/* 1200px => */
+@media (min-width: 1200px) {
+  main {
+    min-width: 1100px;
+    min-height: 70vh;
+    flex-direction: row;
+  }
+  .upper_container {
+    flex: 1;
+  }
+  .big-circle {
+    width: 40px;
+    height: 40px;
+  }
+  .small-circle {
+    width: 23px;
+    height: 23px;
+  }
+  .number-group span {
+    font-size: 1.4rem;
+  }
+  .lower_container {
+    flex: 2;
+    align-items: center;
+  }
+  form {
+    margin: 1rem 8rem 5.5rem 13rem;
+    padding-top: 1.2rem;
+    padding-left: 2.5rem;
+    height: 100%;
+    justify-content: center;
+  }
+  form .form-button {
+    margin-top: 4rem;
+  }
+  form label {
+    font-size: 0.8rem;
+  }
+  .input-group input,
+  .last-group input {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+  .card-front,
+  .card-back,
+  .card-front-complete-data,
+  .card-back-complete-data {
+    height: 200px;
+    width: 350px;
+  }
+  .card-front,
+  .card-front-complete-data {
+    top: 20%;
+    left: 75%;
+  }
+  .number-group {
+    padding-right: 0.5rem;
+  }
+  .card-back,
+  .card-back-complete-data {
+    top: 54%;
+    left: 95%;
+  }
+  .cvc-display {
+    top: 5.7rem;
+    right: 2.4rem;
+    font-size: 0.7rem;
+  }
+  .position-number-container::after {
+    top: 5.7rem;
+    right: 2.4rem;
+  }
+  .position-number-container::after {
+    font-size: 0.7rem;
+  }
+  .modal-success-message-inner-container {
+    margin: auto;
+    padding-top: 1.5rem;
+    padding-inline: 0rem;
+    padding-left: 7rem;
+  }
+  .modal-success-message-logo {
+    width: 70px;
+    height: 70px;
+  }
+  .modal-success-message-text h1 {
+    font-size: 1.6rem;
+  }
+  .modal-success-message-text p {
+    font-size: 1rem;
+  }
+  .modal_success_message .form-button {
+    width: 350px;
+  }
+}
+/* Project info */
+.attribution {
+  position: fixed;
+  bottom: 0;
+  padding: 0.5rem;
+  color: var(--very-dark-violet);
+}
+
+.attribution a {
+  color: var(--red);
+}
+
+/*---------------------*/
+/* ZAVRSNE TACKE-DOVRSITI I PROVERITI/TESTIRATI 100 PUTA!
+
+/* BELESKE-STA SAM NAUCIO/KOJE PROBLEME SAM IMAO/LICNA ZAPAVANJA
+  => Naucio sam sta su input 'spinner'-i i kako mogu da ih uklonim/stilizujem
+  => Odlicno sam dosao do zakljucka da broj na zadnjoj strani kartice '000'
+  moze da se uradi(mozda je i najbolje tako) preko pseudo elementa,
+  tako sto bi unutar glavnog omotaca dodao jos jedan i dao mu 100% sirinu i visinu,
+  i 'POSITION; RELATIVE' svojstvo, kako bi pseudo element ::after imao 
+  "POSITION: ABSOLUTE" i pozicionirao se u odnosu na taj novi omotac
+  => Kartice, kao i pozadina ne dobijaju te boje od posebnog 'BACKGROUND: linear-gradient..'
+  svojstva, vec od posebnih fotki koje se nalaze unutar projekta.
+  Potrebno ih je samo ubaciti preko 'BACKGROUND: url(...)' svojstva, i iste je potrebno
+  pozicionirati preko 'BACKGROUND-SIZE'/ 'BACKGROUND-POSITION'
+  => ODLICNO sam zakljucio da je problem kod poslednje grupe inputa(3 polja) 
+  i njihovom 'bezanju' van okvira glavnog omotaca (ne)dodavanje 'WIDTH: 100%',
+  uz prethodno/naknadno dodavanje 'FLEX: 1" na ova unutrasnja omotaca sa input-ima
+=> Doneo sam KVALITETNE ODLUKE, za pocetak, za koje sirine uredjaja da napisem
+MEDIA UPITE
+=> ODLICNO-ODLICNOOOO!!! sam zapazio kako da na sirim uredjajima BRZE I BOLJE
+napisem odgovarajuci PADDING/MARGIN itd. To bih postigao na nacin da PRVO
+RESETUJEM sva margin/padding i slicna svojstva na odgovarajucim elementima,
+a potom napisem one koje blize odgovaraju dizajnu. **
+
+=> DOSAO DO css- zavrsnog-NAJVAZNIJEG I NAJKVALITETNIJEG I NAJTACNIJEH RESENJA DO SAD!!
+=> ODLICNO sam 'skontao' da MODAL elemente i kartice mogu da dodam u HTML-u
+sa razlicitim klasama, dodavajuci im iste stilove(kopirati stilove) u CSS-u:
+1. KARTICE
+2. DEO SA PORUKOM O USPESNOSTI DODAVANJE PODATAKA
+
+=> Naucio sam vise o form proverama koristeci RegEx(more complex form validations)
+*//*# sourceMappingURL=styles.css.map */
