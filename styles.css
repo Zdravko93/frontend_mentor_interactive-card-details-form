@@ -580,34 +580,3 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 /*---------------------*/
-/* ZAVRSNE TACKE-DOVRSITI I PROVERITI/TESTIRATI 100 PUTA!
-
-/* BELESKE-STA SAM NAUCIO/KOJE PROBLEME SAM IMAO/LICNA ZAPAVANJA
-  => Naucio sam sta su input 'spinner'-i i kako mogu da ih uklonim/stilizujem
-  => Odlicno sam dosao do zakljucka da broj na zadnjoj strani kartice '000'
-  moze da se uradi(mozda je i najbolje tako) preko pseudo elementa,
-  tako sto bi unutar glavnog omotaca dodao jos jedan i dao mu 100% sirinu i visinu,
-  i 'POSITION; RELATIVE' svojstvo, kako bi pseudo element ::after imao 
-  "POSITION: ABSOLUTE" i pozicionirao se u odnosu na taj novi omotac
-  => Kartice, kao i pozadina ne dobijaju te boje od posebnog 'BACKGROUND: linear-gradient..'
-  svojstva, vec od posebnih fotki koje se nalaze unutar projekta.
-  Potrebno ih je samo ubaciti preko 'BACKGROUND: url(...)' svojstva, i iste je potrebno
-  pozicionirati preko 'BACKGROUND-SIZE'/ 'BACKGROUND-POSITION'
-  => ODLICNO sam zakljucio da je problem kod poslednje grupe inputa(3 polja) 
-  i njihovom 'bezanju' van okvira glavnog omotaca (ne)dodavanje 'WIDTH: 100%',
-  uz prethodno/naknadno dodavanje 'FLEX: 1" na ova unutrasnja omotaca sa input-ima
-=> Doneo sam KVALITETNE ODLUKE, za pocetak, za koje sirine uredjaja da napisem
-MEDIA UPITE
-=> ODLICNO-ODLICNOOOO!!! sam zapazio kako da na sirim uredjajima BRZE I BOLJE
-napisem odgovarajuci PADDING/MARGIN itd. To bih postigao na nacin da PRVO
-RESETUJEM sva margin/padding i slicna svojstva na odgovarajucim elementima,
-a potom napisem one koje blize odgovaraju dizajnu. **
-
-=> DOSAO DO css- zavrsnog-NAJVAZNIJEG I NAJKVALITETNIJEG I NAJTACNIJEH RESENJA DO SAD!!
-=> ODLICNO sam 'skontao' da MODAL elemente i kartice mogu da dodam u HTML-u
-sa razlicitim klasama, dodavajuci im iste stilove(kopirati stilove) u CSS-u:
-1. KARTICE
-2. DEO SA PORUKOM O USPESNOSTI DODAVANJE PODATAKA
-
-=> Naucio sam vise o form proverama koristeci RegEx(more complex form validations)
-*//*# sourceMappingURL=styles.css.map */
