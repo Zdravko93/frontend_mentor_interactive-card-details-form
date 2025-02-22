@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](Screenshot_Frontend_Mentor_Interactive_card_details_form.png)
+![Interactive-card-details-form](Screenshot_Frontend_Mentor_Interactive_card_details_form.png)
 
 ### Links
 
@@ -43,22 +43,21 @@ Users should be able to:
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- Mobile-first workflow
+- Semantic HTML5: For clear and accessible markup.
+- CSS Custom Properties: For efficient styling with reusable variables.
+- Flexbox: For a flexible and responsive layout.
+- Mobile-First Workflow: Ensuring optimal design across all device sizes.
 
 ### What I learned
 
-- I learned a lot about RegEx, and its use cases
-- I made progress in JavaScript abilities
-- I reenforced what I learned so far, both in CSS and JavaScript and found new ways to implement different layouts
-- Developed a keen eye for detail
-- Gained valuable confidence in my abilities to keep me going, and always striving for more and always improve myself
+- Gained a deeper understanding of RegEx for form validation, particularly for card number, expiry date, and CVC fields.
+- Improved my JavaScript skills, especially related to handling form validation and real-time updates.
+- Reinforced my CSS knowledge, particularly in implementing flexbox layouts and creating responsive designs.
+- Developed a sharper eye for detail, ensuring a seamless user experience across devices.
 
 ### Useful resources
 
-- [Stack Overflow](https://stackoverflow.com/) - This helped me a ton with my RegEx and form validation process. Clarified to me how often RegEx is being used in form validations, and I learned new ways to validate forms, and I can't wait to learn more about it
+- [Stack Overflow](https://stackoverflow.com/) - A valuable resource during the form validation process. I learned a great deal about RegEx and its applications in form validation.
 
 ## Author
 
