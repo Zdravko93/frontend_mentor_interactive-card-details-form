@@ -3,13 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Frontend Mentor | Interactive card details form</title>
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
+    <meta
+      name="description"
+      content="Interactive credit card details form challenge solution built with HTML, CSS, and JavaScript. Includes validation, UI updates, and responsive design."
     />
+    <meta
+      name="keywords"
+      content="Frontend Mentor, credit card form, interactive form, JavaScript validation, ES modules, responsive UI"
+    />
+    <meta name="author" content="Zdravko93" />
+
+    <!-- OPEN GRAPH-->
+    <meta
+      property="og:title"
+      content="Frontend Mentor | Interactive card details form"
+    />
+    <meta
+      property="og:description"
+      content="A Frontend Mentor challenge solution built using modular JavaScript, modern validation, and responsive UI."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://zdravko93.github.io/frontend_mentor_interactive-card-details-form/Screenshot_Frontend_Mentor_Interactive_card_details_form.png"
+    />
+    <meta
+      property="og:url"
+      content="https://zdravko93.github.io/frontend_mentor_interactive-card-details-form/"
+    />
+
+    <!--TWITTER CARD TAGS-->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Frontend Mentor | Interactive card details form"
+    />
+    <meta
+      name="twitter:description"
+      content="A clean JavaScript ES modules project with responsive UI and real-time validation."
+    />
+    <meta
+      name="twitter:image"
+      content="https://zdravko93.github.io/frontend_mentor_interactive-card-details-form/Screenshot_Frontend_Mentor_Interactive_card_details_form.png"
+    />
+
+    <title>Interactive Card Details Form | Frontend Mentor Solution</title>
+    <link rel="canonical" href="" />
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -107,7 +150,7 @@
           <div class="input-group">
             <label for="name">Cardholder Name</label>
             <input id="name" type="text" placeholder="e.g. Jane Appleseed" />
-            <p class="error"></p>
+            <p class="error" aria-live="polite"></p>
           </div>
 
           <div class="input-group">
@@ -117,7 +160,7 @@
               type="text"
               placeholder="e.g. 1234 5678 9123 0000"
             />
-            <p class="error"></p>
+            <p class="error" aria-live="polite"></p>
           </div>
 
           <div class="last-group">
@@ -126,21 +169,21 @@
               <div class="last-group-element-one-flex">
                 <div>
                   <input id="month" type="text" placeholder="MM" />
-                  <p class="error"></p>
+                  <p class="error" aria-live="polite"></p>
                 </div>
                 <div>
                   <input id="year" maxlength="2" type="text" placeholder="YY" />
-                  <p class="error"></p>
+                  <p class="error" aria-live="polite"></p>
                 </div>
               </div>
             </div>
             <div class="last-group-element-two">
               <label for="cvc">Cvc</label>
               <input id="cvc" type="text" placeholder="e.g. 123" />
-              <p class="error"></p>
+              <p class="error" aria-live="polite"></p>
             </div>
           </div>
-          <button class="form-button">Confirm</button>
+          <button type="submit" class="form-button">Confirm</button>
         </form>
 
         <!--MODAL SUCCESS MESSAGE-->
@@ -155,7 +198,7 @@
               <p>We've added your card details</p>
             </div>
 
-            <button class="form-button">Continue</button>
+            <button type="submit" class="form-button">Continue</button>
           </div>
         </div>
       </section>
