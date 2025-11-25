@@ -1,22 +1,23 @@
- **Frontend Mentor - Interactive card details form solution**
+**Frontend Mentor - Interactive card details form solution**
 
- This is a solution to the [Interactive card details form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw). 
- Frontend Mentor challenges help developers improve their coding skills by building realistic projects and implementing real-world features. 
+This is a solution to the [Interactive card details form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw).
+Frontend Mentor challenges help developers improve their coding skills by building realistic projects and implementing real-world features.
 
 ## Table of contents
 
-  - [Overview](#overview)
-    - [The challenge](#the-challenge)
-    - [Screenshot](#screenshot)
-    - [Links](#links)
-  - [My process](#my-process)
-    - [Built with](#built-with)
-    - Features
-    - [What I learned](#what-i-learned)
-    - [Useful resources](#useful-resources)
-  - Installation & Usage
-  - [Author](#author)
-  - Future Improvements
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [Features](#features)
+  - [What I learned](#what-i-learned)
+  - [Useful resources](#useful-resources)
+- [Installation & Usage](#installation--usage)
+- [LightHouse Report](#lighthouse-report)
+- [Author](#author)
+- [Future Improvements](#future-improvements)
 
 ## 🧐 Overview
 
@@ -37,8 +38,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: (https://github.com/Zdravko93/frontend_mentor_interactive-card-details-form)
-- Live Site URL: (https://zdravko93.github.io/frontend_mentor_interactive-card-details-form/)
+- Solution URL: [Github Repository](https://github.com/Zdravko93/frontend_mentor_interactive-card-details-form)
+- Live Site URL: [Live Demo](https://zdravko93.github.io/frontend_mentor_interactive-card-details-form/)
 
 ## 🧠 My process
 
@@ -46,11 +47,12 @@ Users should be able to:
 
 - Semantic HTML5 - For clean, accessible markup
 - CSS Custom Properties - For consistent, reusable styling
-- Flexbox - For a flexible and responsive layout
-- Mobile-First Workflow - to ensure optimal design across all devices
-- Vanilla JavaScript (ES6) - for real-time form updates and validation 
+- Flexbox - For flexible and responsive layout
+- Mobile-First Workflow - Ensures optimal design across devices
+- Vanilla JavaScript (ES6) - Handles real-time form updates and validation
 
 ### ✨ Features
+
 - Real-time updates on the card preview as the user types
 - Inline validation with error messages for incorrect input formats
 - Fully responsive layout across mobile, tablet, and desktop
@@ -59,18 +61,19 @@ Users should be able to:
 
 ### What I learned
 
-- Deepened my understanding of RegEx for form validation, especially for validating card numbers, expiry dates, and CVC inputs
-- Improved my JavaScript skills, particularly in handling real-time DOM updates and input validation
-- Reinforced CSS knowledge — especially around Flexbox layouts, responsive design, and form styling
-- Developed a keener eye for UX details, ensuring a smooth and consistent experience across devices
+- Deepened my understanding of RegEx for form validation (card numbers, expiry dates, CVC)
+- Improved JS skills for real-time DOM updates and input validation
+- Reinforced CSS knowledge — Flexbox, responsive design, and form styling
+- Developed an eye for UX details, ensuring smooth experiences across devices
 
 ### Useful resources
 
-- [MDN Web Docs](https://developer.mozilla.org/en-US/) - My go-to reference for JavaScript and CSS syntax
-- [Stack Overflow](https://stackoverflow.com/) - A valuable resource during the form validation process. I learned a great deal about RegEx and its applications in form validation.
-- [RegExr](https://regexr.com/) - A great tool to test and debug regular expressions interactively
+- [MDN Web Docs](https://developer.mozilla.org/en-US/) - Reference for JS and CSS syntax
+- [Stack Overflow](https://stackoverflow.com/) - Helped with RegEx and validation issues
+- [RegExr](https://regexr.com/) - Tool to test and debug regular expressions
 
 ## Installation & Usage
+
 To view or modify this project locally:
 
 1. Clone the repository:
@@ -80,14 +83,36 @@ To view or modify this project locally:
    ```
 
 2. Navigate into the project folder
+
    ```bash
    cd frontend_mentor_interactive-card-details-form
-   ``` 
+   ```
 
 3. Open `index.html` in your browser
 
 No build steps required - it's a fully static project!
 
+## Lighthouse Report
+
+Mobile
+
+- Performance: 99
+- Accessibility: 100
+- Best Practices: 100
+- SEO: 100
+
+![Lighthouse Mobile Screenshot](/Lighthouse-report-mobile.png)
+
+Desktop
+
+- Performance: 100
+- Accessibility: 100
+- Best Practices: 100
+- SEO: 100
+
+![Lighthouse Desktop Screenshot](/Lighthouse-report-desktop.png)
+
+Excellent scores indicate the project is fast, accessible, follows best practices, and is SEO-friendly.
 
 ## 👨‍💻 Author
 
@@ -95,10 +120,9 @@ No build steps required - it's a fully static project!
 - GitHub - [@Zdravko93](https://github.com/Zdravko93)
 
 ## 🚀 Future Improvements
-- Implement input masking for a smoother typing experience (e.g., auto-spacing card numbers)
-- Add subtle animations or transitions when the card details update
+
+- Subtle animations or transitions when card details update
 - Integrate basic unit tests for form validation logic
 - Experiment with CSS Grid for layout variation and more complex responsiveness.
 
-✅ This project helped me strengthen my frontend fundamentals and attention to user experience — from clean code structure to visual polish.
-Thank you for checking it out! 🙌
+✅ This project strengthened my frontend fundamentals, UX attention, and code readability. Thanks for checking it out! 🙌
