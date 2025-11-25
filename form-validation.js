@@ -5,20 +5,30 @@ const expirationYearInput = document.querySelector("#year");
 const cvcInput = document.querySelector("#cvc");
 const form = document.querySelector("form");
 const errorMessages = document.querySelectorAll(".error");
-const successStateCardFront = document.querySelector(".card-front-complete-data");
+const successStateCardFront = document.querySelector(
+  ".card-front-complete-data"
+);
 const successStateCardBack = document.querySelector(".card-back-complete-data");
-const successStateMessageModal = document.querySelector(".modal_success_message");
-const closeModalBtn = document.querySelector(".modal_success_message .form-button");
+const successStateMessageModal = document.querySelector(
+  ".modal_success_message"
+);
+const closeModalBtn = document.querySelector(
+  ".modal_success_message .form-button"
+);
 
 // Dynamic card data interface elements
-const cardNameUI = document.querySelector(".card-front-name-group span:first-of-type");
-const cardExpiryUI = document.querySelector(".card-front-name-group span:last-of-type");
+const cardNameUI = document.querySelector(
+  ".card-front-name-group span:first-of-type"
+);
+const cardExpiryUI = document.querySelector(
+  ".card-front-name-group span:last-of-type"
+);
 const cardCVC = document.querySelector(".cvc-display");
 
 // validation RegEx
 const cardNameRegEx = /^[A-Z][a-z]*(\s[A-Z][a-z]*)*$/;
 const expirationMonthRegEx = /^(0[1-9]|1[0-12])$/;
-const expirationYearRegEx = /^(2[3-9]|[3-9]\d|\d{3,})$/; 
+const expirationYearRegEx = /^(2[3-9]|[3-9]\d|\d{3,})$/;
 const cvcRegEx = /^[0-9]{3}$/;
 
 const showError = (input, errorMessageElement, errorMessage) => {
@@ -30,7 +40,6 @@ const clearError = (input, errorMessageElement) => {
   input.classList.remove("show-error");
   errorMessageElement.textContent = "";
 };
-
 
 // Input fields Event Listeners
 
@@ -53,23 +62,25 @@ cardNameInput.addEventListener("input", () => {
   }
 });
 
-
 //Card Number
 cardNumberInput.addEventListener("input", () => {
-  let inputValue = cardNumberInput.value.replace(/\D/g, ''); // Remove non-digit characters/Prevent user from typing in all non-digit characters
-  inputValue = inputValue.replace(/(\d{4}(?=\d))/g, '$1 '); // Add a space after every 4 digits
+  let inputValue = cardNumberInput.value.replace(/\D/g, ""); // Remove non-digit characters/Prevent user from typing in all non-digit characters
+  inputValue = inputValue.replace(/(\d{4}(?=\d))/g, "$1 "); // Add a space after every 4 digits
 
-  const inputWithoutSpaces = inputValue.replace(/\s/g, ''); // Remove input before checking the input length
+  const inputWithoutSpaces = inputValue.replace(/\s/g, ""); // Remove input before checking the input length
 
-  if(inputWithoutSpaces.length > 16) {
-    cardNumberInput.value = cardNumberInput.value.slice(0, 19); // Trim input to 16 digits 
-    showError(cardNumberInput, errorMessages[1], "Must only contain 16 digits.");
+  if (inputWithoutSpaces.length > 16) {
+    cardNumberInput.value = cardNumberInput.value.slice(0, 19); // Trim input to 16 digits
+    showError(
+      cardNumberInput,
+      errorMessages[1],
+      "Must only contain 16 digits."
+    );
   } else {
     cardNumberInput.value = inputValue.trim();
     clearError(cardNumberInput, errorMessages[1]);
-  } 
+  }
 });
-
 
 // Card Month
 expirationMonthInput.addEventListener("input", () => {
@@ -146,16 +157,21 @@ form.addEventListener("submit", (event) => {
   }
 
   // Card Number Validation
-  let cardNumberValue = cardNumberInput.value.replace(/\D/g, '');
-  cardNumberValue = cardNumberValue.replace(/(\d{4}(?=\d))/g, '$1 ');
-  const cardNumberWithoutSpaces = cardNumberValue.replace(/\s/g, '');
+  let cardNumberValue = cardNumberInput.value.replace(/\D/g, "");
+  cardNumberValue = cardNumberValue.replace(/(\d{4}(?=\d))/g, "$1 ");
+  const cardNumberWithoutSpaces = cardNumberValue.replace(/\s/g, "");
   if (cardNumberWithoutSpaces.length !== 16) {
-    showError(cardNumberInput, errorMessages[1], "Must only contain 16 digits.");
+    showError(
+      cardNumberInput,
+      errorMessages[1],
+      "Must only contain 16 digits."
+    );
   }
 
   // Card Expiration Month Validation
   const expirationMonthValue = expirationMonthInput.value.trim();
-  const expirationMonthIsValid = expirationMonthRegEx.test(expirationMonthValue);
+  const expirationMonthIsValid =
+    expirationMonthRegEx.test(expirationMonthValue);
   if (expirationMonthValue === "") {
     showError(expirationMonthInput, errorMessages[2], "Can't be blank");
   } else if (!expirationMonthIsValid) {
@@ -193,7 +209,13 @@ form.addEventListener("submit", (event) => {
   }
 
   // Checking if all inputs are valid to finally display success message
-  if (cardNameIsValid && cardNumberWithoutSpaces.length === 16 && expirationMonthIsValid && expirationYearIsValid && cvcIsValid) {
+  if (
+    cardNameIsValid &&
+    cardNumberWithoutSpaces.length === 16 &&
+    expirationMonthIsValid &&
+    expirationYearIsValid &&
+    cvcIsValid
+  ) {
     openSuccessModal();
     cardNameUI.textContent = cardNameValue;
     cardExpiryUI.textContent = `${expirationMonthValue}/${expirationYearValue}`;
@@ -201,18 +223,17 @@ form.addEventListener("submit", (event) => {
   }
 });
 
-
 const openSuccessModal = () => {
   successStateCardFront.classList.add("complete");
   successStateCardBack.classList.add("complete");
   successStateMessageModal.classList.add("complete");
   resetInputs();
-}
+};
 
 const resetInputs = () => {
-  document.querySelectorAll("input").forEach(input => {
+  document.querySelectorAll("input").forEach((input) => {
     input.value = "";
-  })
+  });
 };
 
 const closeSuccessModal = () => {
