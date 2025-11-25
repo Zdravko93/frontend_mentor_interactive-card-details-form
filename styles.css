@@ -37,6 +37,13 @@ main {
   box-shadow: 1px 1px 20px 1px rgba(0, 0, 0, 0.2);
 }
 
+.expiry-date-title {
+  margin: 0;
+  font-weight: normal;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
 .upper_container {
   padding: 8rem 0rem;
   background: url("images/bg-main-mobile.png");
@@ -573,10 +580,11 @@ input[type=number]::-webkit-inner-spin-button {
   bottom: 0;
   padding: 0.5rem;
   color: var(--very-dark-violet);
+  z-index: 100;
 }
 
 .attribution a {
   color: var(--red);
 }
 
-/*---------------------*/
+/*---------------------*//*# sourceMappingURL=styles.css.map */
